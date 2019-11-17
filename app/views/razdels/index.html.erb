@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Razdels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @razdels.each do |razdel| %>
+      <tr>
+        <td><%= razdel.name %></td>
+        <td><%= link_to 'Show', razdel %></td>
+        <td><%= link_to 'Edit', edit_razdel_path(razdel) %></td>
+        <td><%= link_to 'Destroy', razdel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Razdel', new_razdel_path %>

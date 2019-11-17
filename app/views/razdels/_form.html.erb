@@ -1,0 +1,22 @@
+<%= form_with(model: razdel, local: true) do |form| %>
+  <% if razdel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(razdel.errors.count, "error") %> prohibited this razdel from being saved:</h2>
+
+      <ul>
+      <% razdel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

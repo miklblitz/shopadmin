@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @good.name %>
+</p>
+
+<p>
+  <strong>Article:</strong>
+  <%= @good.article %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @good.content %>
+</p>
+
+<p>
+  <strong>Razdel:</strong>
+  <%= @good.razdel %>
+</p>
+
+<p>
+  <strong>Rubles:</strong>
+  <%= @good.rubles %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @good.availability %>
+</p>
+
+<%= link_to 'Edit', edit_good_path(@good) %> |
+<%= link_to 'Back', goods_path %>
